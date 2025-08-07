@@ -44,50 +44,83 @@ Comparisons with other methods:
 * The bounding box on the video shows the input trajectory, our method demonstrates the best bbox-alignment and also prompt-alignment.
 * Since our method generates videos in a layer-to-layer manner, visual quality of generated results are guaranteed.
 
-<table>
+<table align="center">
+  <!-- 第一行：方法标签 -->
   <tr>
-    <td>
-      <img src="./assets/demo/deer-horse-grassland-row.gif"  />
-      <p align="center">A deer and a horse running on the grassland.</p>
+    <td align="center" width="256">MCtrl<sup>[1]</sup></td>
+    <td align="center" width="256">Peek<sup>[2]</sup></td>
+    <td align="center" width="256">Dav<sup>[3]</sup></td>
+    <td align="center" width="256">Ours</td>
+  </tr>
+
+  <!-- deer-horse-grassland -->
+  <tr>
+    <td colspan="4" align="center">
+      <img src="./assets/demo/deer-horse-grassland-row.gif" width="1024" height="256"/><br/>
+      A deer and a horse running on the grassland.
     </td>
   </tr>
+
+  <!-- duck-stone -->
   <tr>
-    <td>
-      <img src="./assets/demo/duck-stone-row.gif" />
-      <p align="center">A duck and a stone floating in the pond of a park.</p>
+    <td colspan="4" align="center">
+      <img src="./assets/demo/duck-stone-row.gif" width="1024" height="256"/><br/>
+      A duck and a stone floating in the pond of a park.
     </td>
   </tr>
+
+  <!-- robot-corgi-beach -->
   <tr>
-    <td>
-      <img src="./assets/demo/robot-corgi-beach-row.gif"  />
-      <p align="center">A corgi and a robot running on the beach.</p>
+    <td colspan="4" align="center">
+      <img src="./assets/demo/robot-corgi-beach-row.gif" width="1024" height="256"/><br/>
+      A corgi and a robot running on the beach.
     </td>
   </tr>
+
+  <!-- two-geese -->
   <tr>
-    <td>
-      <img src="./assets/demo/two-geese-row.gif"  />
-      <p align="center">Two geese swimming in the lake.</p>
+    <td colspan="4" align="center">
+      <img src="./assets/demo/two-geese-row.gif" width="1024" height="256"/><br/>
+      Two geese swimming in the lake.
     </td>
   </tr>
+
+  <!-- deer-bear-cabin -->
   <tr>
-    <td>
-      <img src="./assets/demo/deer-bear-cabin-row.gif" />
-      <p align="center">A deer and a bear running on the grassland with a cabin in the distance.</p>
+    <td colspan="4" align="center">
+      <img src="./assets/demo/deer-bear-cabin-row.gif" width="1024" height="256"/><br/>
+      A deer and a bear running on the grassland with a cabin in the distance.
     </td>
   </tr>
+
+  <!-- jellyfish-carp -->
   <tr>
-    <td>
-      <img src="./assets/demo/jellyfish-carp-row.gif"  />
-      <p align="center">A jellyfish and a carp in the ocean.</p>
+    <td colspan="4" align="center">
+      <img src="./assets/demo/jellyfish-carp-row.gif" width="1024" height="256"/><br/>
+      A jellyfish and a carp in the ocean.
     </td>
   </tr>
 </table>
 
 
 
+
+
 ## Installation & Inference
 
 <p>Codes will be organized shortly before submission ... Stay tuned! 🔥</p>
+
+
+<br>
+
+
+### References
+
+~~~
+[1] Wang Z, Yuan Z, Wang X, *et al.* MotionCtrl: A unified and flexible motion controller for video generation. In: *ACM SIGGRAPH Conference Papers*, 2024: 1–11.  
+[2] Jain Y, Nasery A, Vineet V, *et al.* Peekaboo: Interactive video generation via masked diffusion. In: *CVPR*, 2024: 8079–8088.  
+[3] Yang S, Hou L, Huang H, *et al.* Direct-A-Video: Customized video generation with user-directed camera movement and object motion. In: *ACM SIGGRAPH Conference Papers*, 2024: 1–12.
+~~~
 
 
 ## Citation <a name="cite"></a>
