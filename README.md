@@ -44,19 +44,19 @@ Comparisons with other methods:
 * The bounding box on the video shows the input trajectory, our method demonstrates the best bbox-alignment and also prompt-alignment.
 * Since our method generates videos in a layer-to-layer manner, visual quality of generated results are guaranteed.
 
-<table align="center">
-  <!-- 第一行：方法标签 -->
+<table align="center" style="width:768px;">
+  <!-- 方法标签 -->
   <tr>
-    <td align="center" width="256">MCtrl<sup>[1]</sup></td>
-    <td align="center" width="256">Peek<sup>[2]</sup></td>
-    <td align="center" width="256">Dav<sup>[3]</sup></td>
-    <td align="center" width="256">Ours</td>
+    <td align="center" width="192">MCtrl<sup>[1]</sup></td>
+    <td align="center" width="192">Peek<sup>[2]</sup></td>
+    <td align="center" width="192">Dav<sup>[3]</sup></td>
+    <td align="center" width="192">Ours</td>
   </tr>
 
   <!-- deer-horse-grassland -->
   <tr>
     <td colspan="4" align="center">
-      <img src="./assets/demo/deer-horse-grassland-row.gif" width="1024" height="256"/><br/>
+      <img src="./assets/demo/deer-horse-grassland-row.gif"/><br/>
       A deer and a horse running on the grassland.
     </td>
   </tr>
@@ -64,7 +64,7 @@ Comparisons with other methods:
   <!-- duck-stone -->
   <tr>
     <td colspan="4" align="center">
-      <img src="./assets/demo/duck-stone-row.gif" width="1024" height="256"/><br/>
+      <img src="./assets/demo/duck-stone-row.gif"/><br/>
       A duck and a stone floating in the pond of a park.
     </td>
   </tr>
@@ -72,7 +72,7 @@ Comparisons with other methods:
   <!-- robot-corgi-beach -->
   <tr>
     <td colspan="4" align="center">
-      <img src="./assets/demo/robot-corgi-beach-row.gif" width="1024" height="256"/><br/>
+      <img src="./assets/demo/robot-corgi-beach-row.gif"/><br/>
       A corgi and a robot running on the beach.
     </td>
   </tr>
@@ -80,7 +80,7 @@ Comparisons with other methods:
   <!-- two-geese -->
   <tr>
     <td colspan="4" align="center">
-      <img src="./assets/demo/two-geese-row.gif" width="1024" height="256"/><br/>
+      <img src="./assets/demo/two-geese-row.gif"/><br/>
       Two geese swimming in the lake.
     </td>
   </tr>
@@ -88,7 +88,7 @@ Comparisons with other methods:
   <!-- deer-bear-cabin -->
   <tr>
     <td colspan="4" align="center">
-      <img src="./assets/demo/deer-bear-cabin-row.gif" width="1024" height="256"/><br/>
+      <img src="./assets/demo/deer-bear-cabin-row.gif"/><br/>
       A deer and a bear running on the grassland with a cabin in the distance.
     </td>
   </tr>
@@ -96,11 +96,12 @@ Comparisons with other methods:
   <!-- jellyfish-carp -->
   <tr>
     <td colspan="4" align="center">
-      <img src="./assets/demo/jellyfish-carp-row.gif" width="1024" height="256"/><br/>
+      <img src="./assets/demo/jellyfish-carp-row.gif"/><br/>
       A jellyfish and a carp in the ocean.
     </td>
   </tr>
 </table>
+
 
 
 
