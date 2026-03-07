@@ -13,7 +13,7 @@
 ## 🚀 News
 
 * **[Feb. 2026]** Release [LayerT2V v2](https://arxiv.org/abs/2508.04228v2) on arXiv, where we adopt Wan2.1 Video as our backbone and introduce training-wise paradigm for layer-aware video generation.
-* **[Aug. 2025]** Release [LayerT2V](https://arxiv.org/abs/2508.04228) on arXiv.
+* **[Aug. 2025]** Release [LayerT2V](https://arxiv.org/abs/2508.04228) on arXiv. For v1 version, you could check [LayerT2V-v1 branch](https://github.com/Kr-Panghu/LayerT2V-public/tree/LayerT2V-v1).
 
 ## 📖 Intro
 
