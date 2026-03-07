@@ -41,7 +41,7 @@ LayerT2V generates high-fidelity multi-layer videos across three generation mode
 
 Our method produces clean foreground separation, sharp alpha mattes, and complete backgrounds without leakage or boundary artifacts across diverse scenes and motion patterns.
 
-<img src="./assets/layert2v-v2.png"
+<img src="./assets/LayerT2V-v2.png"
       alt="CIPT2V Pipeline Diagram"
       style="max-width: 90%; height: auto; display: block; margin: 0 auto 30px;">
 
