@@ -3,49 +3,54 @@
 </p>
 <div align="center">
 
-## LayerT2V: Interactive Multi-Object Trajectory Layering for Video Generation
+## LayerT2V: A Unified Multi-Layer Video Generation Framework
 
-[![Paper](https://img.shields.io/badge/Paper-gray)](https://kr-panghu.github.io/LayerT2V/assets/pdf/LayerT2V.pdf) &ensp; [![arXiv](https://img.shields.io/badge/arXiv-red)](https://arxiv.org/abs/2508.04228) &ensp; [![Project Page](https://img.shields.io/badge/Project%20Page-green
+[![Paper](https://img.shields.io/badge/Paper-gray)](https://kr-panghu.github.io/LayerT2V/assets/pdf/LayerT2V.pdf) &ensp; [![arXiv](https://img.shields.io/badge/arXiv-red)](https://arxiv.org/abs/2508.04228v2) &ensp; [![Project Page](https://img.shields.io/badge/Project%20Page-green
 )](https://kr-panghu.github.io/LayerT2V/)
 
 </div>
 
-<p align="center">
-<span class="author-block">
-  <a href="https://kr-panghu.github.io/">Kangrui Cen</a>&nbsp&nbsp</span>
-<span class="author-block">
-  <a href="https://scholar.google.com/citations?user=i46wdAUAAAAJ&hl=zh-CN">Baixuan Zhao</a>&nbsp&nbsp</span>
-<span class="author-block">
-  <a href="https://synbol.github.io/">Yi Xin</a>&nbsp&nbsp</span>
-<span class="author-block">
-  <a href="https://scholar.google.com/citations?hl=en&user=_Cwn43wAAAAJ">Siqi Luo</a>&nbsp&nbsp</span>
-<span class="author-block">
-  <a href="https://scholar.google.com/citations?user=E6zbSYgAAAAJ&hl=en">Guangtao Zhai</a>&nbsp&nbsp</span>
-<span class="author-block">
-  <a href="https://jhc.sjtu.edu.cn/~xiaohongliu/">Xiaohong Liu</a>&nbsp&nbsp</span>
-</p>
+## 🚀 News
 
+* **[Feb. 2026]** Release [LayerT2V v2](https://arxiv.org/abs/2508.04228v2) on arXiv, where we adopt Wan2.1 Video as our backbone and introduce training-wise paradigm for layer-aware video generation.
+* **[Aug. 2025]** Release [LayerT2V](https://arxiv.org/abs/2508.04228) on arXiv.
 
-> ✨ We introduce LayerT2V, the first approach<sup>#</sup>  for generating video by compositing background and foreground objects layer by layer. This layered generation enables flexible integration of multiple independent elements within a video, positioning each element on a distinct "layer" and thus facilitating coherent multi-object synthesis while enhancing control over the generation process. Extensive experiments demonstrate the superiority of LayerT2V in generating complex multi-object scenarios, showcasing 1.4x and 4.5x improvements in mIoU and AP50 metrics over state-of-the-art (SOTA) methods.
->
-> <sup>#</sup>Concurrent work: [LayerFlow](https://github.com/SihuiJi/LayerFlow).
-> 
-> 📧 Contact us: kangruicen@gmail.com or xiaohongliu@sjtu.edu.cn
+## 📖 Intro
 
+Text-to-video generation has advanced rapidly, but existing methods typically output only the final composited video and lack editable layered representations, limiting their use in professional workflows. We propose **LayerT2V**, a unified multi-layer video generation framework that produces multiple semantically consistent outputs in a single inference pass: the full video, an independent background layer, and multiple foreground RGB layers with corresponding alpha mattes. 
 
-<img src="./assets/layer-gen.png"
+<img src="./assets/pipe.png"
       alt="CIPT2V Pipeline Diagram"
       style="max-width: 90%; height: auto; display: block; margin: 0 auto 30px;">
 
-## Demo
+We also introduce **VidLayer**, the first large-scale dataset for multi-layer video generation. Extensive experiments demonstrate that LayerT2V substantially outperforms prior methods in visual fidelity, temporal consistency, and cross-layer coherence.
 
-Comparisons with other methods:
+<img src="./assets/data-engine.png"
+      alt="CIPT2V Pipeline Diagram"
+      style="max-width: 90%; height: auto; display: block; margin: 0 auto 30px;">
+
+<img src="./assets/vid-layer.png"
+      alt="CIPT2V Pipeline Diagram"
+      style="max-width: 90%; height: auto; display: block; margin: 0 auto 30px;">
+
+LayerT2V generates high-fidelity multi-layer videos across three generation modes: 
+
+1. single-foreground with a single subject, 
+2. single-foreground with multiple subjects, 
+3. multi-foreground joint generation with independent layers. 
+
+Our method produces clean foreground separation, sharp alpha mattes, and complete backgrounds without leakage or boundary artifacts across diverse scenes and motion patterns.
+
+<img src="./assets/layert2v-v2.png"
+      alt="CIPT2V Pipeline Diagram"
+      style="max-width: 90%; height: auto; display: block; margin: 0 auto 30px;">
+
+<!-- Comparisons with other methods:
 
 * The bounding box on the video shows the input trajectory, our method demonstrates the best bbox-alignment and also prompt-alignment.
 * Since our method generates videos in a layer-to-layer manner, visual quality of generated results are guaranteed.
 
 <table align="center" style="width:768px;">
-  <!-- 方法标签 -->
   <tr>
     <td align="center" width="192">MCtrl<sup>[1]</sup></td>
     <td align="center" width="192">Peek<sup>[2]</sup></td>
@@ -53,7 +58,6 @@ Comparisons with other methods:
     <td align="center" width="192">Ours</td>
   </tr>
 
-  <!-- deer-horse-grassland -->
   <tr>
     <td colspan="4" align="center">
       <img src="./assets/demo/deer-horse-grassland-row.gif"/><br/>
@@ -61,7 +65,6 @@ Comparisons with other methods:
     </td>
   </tr>
 
-  <!-- duck-stone -->
   <tr>
     <td colspan="4" align="center">
       <img src="./assets/demo/duck-stone-row.gif"/><br/>
@@ -69,7 +72,6 @@ Comparisons with other methods:
     </td>
   </tr>
 
-  <!-- robot-corgi-beach -->
   <tr>
     <td colspan="4" align="center">
       <img src="./assets/demo/robot-corgi-beach-row.gif"/><br/>
@@ -77,7 +79,6 @@ Comparisons with other methods:
     </td>
   </tr>
 
-  <!-- two-geese -->
   <tr>
     <td colspan="4" align="center">
       <img src="./assets/demo/two-geese-row.gif"/><br/>
@@ -85,7 +86,6 @@ Comparisons with other methods:
     </td>
   </tr>
 
-  <!-- deer-bear-cabin -->
   <tr>
     <td colspan="4" align="center">
       <img src="./assets/demo/deer-bear-cabin-row.gif"/><br/>
@@ -93,46 +93,30 @@ Comparisons with other methods:
     </td>
   </tr>
 
-  <!-- jellyfish-carp -->
   <tr>
     <td colspan="4" align="center">
       <img src="./assets/demo/jellyfish-carp-row.gif"/><br/>
       A jellyfish and a carp in the ocean.
     </td>
   </tr>
-</table>
+</table> -->
 
 
-
-
-
-
-## Installation & Inference
-
-<p>Codes will be organized shortly before submission ... Stay tuned! 🔥</p>
-
-
-<br>
-
-
-### References
+<!-- ### References
 
 ~~~
 [1] Wang Z, Yuan Z, Wang X, *et al.* MotionCtrl: A unified and flexible motion controller for video generation. In: *ACM SIGGRAPH Conference Papers*, 2024: 1–11.  
 [2] Jain Y, Nasery A, Vineet V, *et al.* Peekaboo: Interactive video generation via masked diffusion. In: *CVPR*, 2024: 8079–8088.  
 [3] Yang S, Hou L, Huang H, *et al.* Direct-A-Video: Customized video generation with user-directed camera movement and object motion. In: *ACM SIGGRAPH Conference Papers*, 2024: 1–12.
-~~~
+~~~ -->
 
 
-## Citation <a name="cite"></a>
+## ✨ Citation <a name="cite"></a>
 ```
-@misc{cen2025layert2vinteractivemultiobjecttrajectory,
-      title={LayerT2V: Interactive Multi-Object Trajectory Layering for Video Generation}, 
-      author={Kangrui Cen and Baixuan Zhao and Yi Xin and Siqi Luo and Guangtao Zhai and Xiaohong Liu},
-      year={2025},
-      eprint={2508.04228},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2508.04228}, 
+@article{cen2025layert2v,
+  title={LayerT2V: Interactive Multi-Object Trajectory Layering for Video Generation},
+  author={Cen, Kangrui and Zhao, Baixuan and Xin, Yi and Luo, Siqi and Zhai, Guangtao and Liu, Xiaohong},
+  journal={arXiv preprint arXiv:2508.04228},
+  year={2025}
 }
 ```
